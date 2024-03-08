@@ -1,5 +1,7 @@
 # Post installation steps
 
+## Prerequisites
+
 1. Development tools
 
 ```console
@@ -18,13 +20,13 @@ cd paru
 makepkg -si
 ```
 
-# Devtools
+## Devtools
 
 ```console
 sudo pacman -S dotnet-sdk
 ```
 
-# GUI specific steps
+## GUI specific steps
 
 1. Install vscode AUR package:
 
@@ -40,7 +42,7 @@ paru coolercontrol
 paru spotify
 ```
 
-# GNOME packages
+## GNOME packages
 
 ```console
 paru gnome-shell-extension-appindicator
@@ -52,4 +54,14 @@ gnome-shell-extension-dash-to-dock
 
 ```console
 paru gnome-shell-extension-freon
+```
+
+```console
+flatpak install org.gnome.World.Secrets
+```
+
+## Power profiles daemon
+
+```console
+sudo pacman -S power-profiles-daemon
 ```

@@ -38,10 +38,6 @@ paru visual-studio-code-bin
 paru coolercontrol
 ```
 
-```console
-paru spotify
-```
-
 ## GNOME packages
 
 ```console
@@ -64,4 +60,32 @@ flatpak install org.gnome.World.Secrets
 
 ```console
 sudo pacman -S power-profiles-daemon
+```
+
+## Entertainment
+
+### Spotify
+
+There are two ways to install Spotify:
+
+1. Install regular package [spotify-launcher](https://archlinux.org/packages/?name=spotify-launcher). This package manages a per-user installation in your home directory, allowing Spotify to update itself independently of pacman (similar to how Spotify self-updates on other operating systems).
+
+2. If you prefer to manage Spotify updates with pacman, instead use the AUR package [spotify](https://aur.archlinux.org/packages/spotify/) which repackages [Spotify for Linux](https://www.spotify.com/us/download/linux/).
+
+```console
+paru spotify
+```
+
+For details see https://wiki.archlinux.org/title/Spotify
+
+### How to install Steam
+
+First we need to make sure, [OpenGL](https://wiki.archlinux.org/title/OpenGL) and [Vulkan](https://wiki.archlinux.org/title/Vulkan) are working.
+
+Then enable [multilib](https://wiki.archlinux.org/title/Official_repositories#multilib) repo.
+
+Finally install Steam via pacman:
+
+```console
+sudo pacman -S steam
 ```

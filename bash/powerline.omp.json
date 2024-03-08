@@ -32,8 +32,12 @@
           "foreground": "#193549",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
-          "template": " {{ .HEAD }} ",
-          "type": "git"
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }} ",
+          "type": "git",
+          "properties": {
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          }
         },
         {
           "background": "#906cff",

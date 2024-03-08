@@ -56,15 +56,21 @@ paru gnome-shell-extension-freon
 flatpak install org.gnome.World.Secrets
 ```
 
-## Power profiles daemon
+## Power management
+
+### 1. Install Power profiles daemon
 
 ```console
 sudo pacman -S power-profiles-daemon
 ```
 
+### 2. Copy udev rules
+
+Copy the udev rules from etc_udev_rules_d to make power profiles daemon switch profiles automatically depending on whether connected to AC or battery.
+
 ## Entertainment
 
-### Spotify
+### 1. Spotify
 
 There are two ways to install Spotify:
 
@@ -78,7 +84,7 @@ paru spotify
 
 For details see https://wiki.archlinux.org/title/Spotify
 
-### How to install Steam
+### 2. How to install Steam
 
 First we need to make sure, [OpenGL](https://wiki.archlinux.org/title/OpenGL) and [Vulkan](https://wiki.archlinux.org/title/Vulkan) are working.
 
